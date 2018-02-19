@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="DashboardProxy" startOnLoad="true" transports="https http" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <endpoint name="endpoint_urn_uuid_6a59b09e-0956-4188-9b7b-8f173089ea66">
+            <address uri="https://lite.realtime.nationalrail.co.uk/OpenLDBWS/ldb11.asmx"/>
+        </endpoint>
+        <inSequence>
+            <log level="full">
+                <property name="MESSAGE" value="Calling Service"/>
+            </log>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </target>
+</proxy>
